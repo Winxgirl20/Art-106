@@ -1,62 +1,61 @@
-//based //based on https://www.openprocessing.org/sketch/424072 by Abdelrhman Wassim
-
-var x= 280;
-var moonRadius = 17;
-
+var x = 280;
+var sunRadius = 25;
 function setup() {
-  var canvas = createCanvas(600, 400);
+  var canvas = createCanvas(400, 400);
   canvas.parent('header');
 }
 
 function draw() {
-
-	background (0,100,100);
-  
-	//the moon :)
-  fill(255);
+  background(232, 0, 77);
+  fill(255, 253, 0);
   noStroke();
-  ellipse(x,140,40,40);
+  ellipse(x,120,100,100);
   x = x + 0.1 ;
-  fill(0,100,100);
-  rect(340,100,60,100);
-	
-	 //buildings
-	stroke(1);
-	line(0,300,300,300);
-	line(300,300,300,200);
-	line(300,200,350,200);
-	line(350,200,350,300);
-	line(350,300,340,300);
-	line(340,300,340,100);
-	line(340,100,370,65);
-	line(370,65,400,100);
-	line(400,100,400,300);
-	line(400,300,375,300);
-	line(375,300,375,150);
-	line(375,150,430,180);
-	line(430,180,430,300);
-	line(430,300,600,300);
-	
-	 //tree
-	fill(10,100,0); //green
-	ellipse(450,284,moonRadius,moonRadius);
-	line(450,300,450,280);
-	line(455,285,450,290);
-	line(445,281,450,286);
-	
-	 //name
-	textSize(30);
-	fill(60,150);
-	text("Abdelrhman",50,200); //shadow
-	text("Wassim",50,225); //shadow
-	fill(155);
-	text("Abdelrhman",48,198);
-	text("Wassim",48,223);
-	
-	console.log(mouseX,mouseY);
-	
-	if (x>width+moonRadius){
-		x=-moonRadius;
-	}
-	
+	noStroke();
+	fill(61, 18, 4);
+	rect(260, 240, 80, 150);
+	noStroke()
+	fill(0, 54, 0);
+	ellipse(300, 200, 125, 125);
+	noStroke();
+  fill(61, 18, 4);
+  rect(50, 240, 80, 150);
+  noStroke();
+  fill(0, 54, 0);
+  ellipse(90, 200, 125, 125);
+  noStroke();
+  fill(0, 54, 0);
+  rect(55, 155, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(40, 140, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(30, 155, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(45, 165, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(265, 155, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(240, 155, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(250, 140, 95, 95);
+  noStroke();
+  fill(0, 54, 0);
+  rect(255, 165, 95, 95);
+  textSize(50);
+  fill(83,0, 118);
+  text("Laura", 150, 60);
+  text("Rossi", 150, 125);
+  console.log(mouseX, mouseY);
+  
+  if(x>width+sunRadius)
+  {
+    x= -sunRadius;
+  }
+  
 }
